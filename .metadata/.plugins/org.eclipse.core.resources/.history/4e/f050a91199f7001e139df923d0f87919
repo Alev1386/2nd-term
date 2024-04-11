@@ -1,0 +1,203 @@
+#include <iostream>
+#include <fstream>
+#include <cmath>
+using namespace std;
+
+/////////////////////////////////define/////////////////////////
+#define SPACE 32//defining space number
+#define ENDL 10//defining end of line number
+
+const char* FNAME = "matrix.txt";
+/////////////////prototypes///////////////////////////////
+int** create_matrix(int *params);//creating matrix
+int get_matrix_from_console(int *&param, int **matrix);//getting matrix from console
+int get_params(int *&params);//gettting parametrs of the matrix from console
+int** get_matrix_from_file(const char *NAME);//reading matrix from file
+int* check_params(const char* NAME);//Checking the size of matrix in file
+int multyply_elements_in_row(int** matrix, int* params,int currentr);//multyplying the elements from current row
+void print_matrix(int** matrix, int* params);//print the matrix
+int get_option();//asking user which method of entering string he prefers
+
+int main() {
+	int* params1 = new int[2];
+	setlocale(LC_ALL, "rus");
+	int** matrix;
+	if (get_option() != 1)
+	{
+		cout << "Entering data from console" << endl;
+		switch(get_params(params1)){//Asking the user to enter the size of matrix
+		case -1:
+			cout << "The number of rows must be a natural number!" << endl;
+			return -1;
+		default:
+			break;
+		}
+		matrix = create_matrix(params1);//creating empty matrix with given size
+		switch(get_matrix_from_console(params1,matrix)){
+		case -1:
+			cout << "Only digits must be entered!" << endl;
+			return -1;
+		default:
+			break;
+		}
+	}
+	else
+	{
+		cout << "Entering data from file" << endl;
+		matrix = get_matrix_from_file(FNAME);
+		params1 = check_params(FNAME);
+	}
+	//print_matrix(matrix, params1);
+	////////////////////////////First issue//////////////////////
+	int max_mult = 0;
+	for (int i = 0; i < params1[0]; i++)
+	{
+		int mult = multyply_elements_in_row(matrix, params1, i);
+		if (mult)
+		{
+			cout << "Multiplying of elements in <" << i+1 << "> string equals <" << mult<<"> \n";
+			if (mult > max_mult) {
+				max_mult = mult;
+			}
+		}
+	}
+	cout << "Max multipluing is = " << max_mult << endl;
+
+	delete[] matrix;
+}
+
+///////////////////realization of functions///////////////////////////////////
+int** create_matrix(int *params) {//function gets the size of matrix
+	int** result = new int* [params[0]];//making rows
+	for (int i = 0; i < params[0]; i++) {//making columns
+		result[i] = new int[params[1]];
+	}
+	return result;
+}
+int get_matrix_from_console(int *&param, int **matrix) {
+	for (int i = 0; i < param[0]; ++i)//getting the matrix from console
+	{
+		for (int j = 0; j < param[1]; ++j) {
+			cout << "Enter the element with index :(" << i+1 << "," << j+1 << ") :";
+			cin >> matrix[i][j];
+			if (cin.fail()) {
+				return -1;
+			}
+		}
+	}
+	return 0;
+}
+int get_params(int *&params) {
+	cout<<"flag"<<endl;
+	cin.sync();//cleaning the stream
+	cout << "Введите число строк" << endl;
+	cin >> params[0];
+	cout << int(params[0]) << endl;
+	if (params[0] <= 0 )
+	{
+		return -1;
+	}
+	cout << "Введите число столбцов" << endl;
+	cin >> params[1];
+	cout << params[1] << endl;
+	if (params[1] <= 0)
+	{
+		return -1;
+	}
+	return 0;
+}
+int** get_matrix_from_file(const char* NAME) {
+	ifstream fin(NAME); //открываем файл
+	int* params = check_params(NAME);
+	int** arr; //матрица
+	arr = new int* [params[0]]; //инициализация
+	for (int i = 0; i < params[0]; i++) //массива
+	{
+		arr[i] = new int[params[1]];
+		for (int j = 0; j < params[1]; j++) //чтение элементов
+			fin >> arr[i][j];
+		if (fin.fail())
+		{
+			cout << "Ошибка! Только числа должны содержаться в файле!" << endl;
+			return 0;
+		}
+	}
+	cout << "Чтение файла окончено!" << endl;
+	fin.close(); //закрываем файл
+	return arr;
+}
+int* check_params(const char* NAME) {
+	ifstream fin(NAME);//Определяем файл
+	int* params = new int[2];
+	params[0]= 0;
+	params[1]= 0;
+	/////////EXISTANCE////////////////////////////////////////
+	if (!fin)
+	{
+		cout << "File " << NAME << " is not found\n";
+		fin.close();
+		system("pause");
+		return 0;
+	} // end if
+	///////////NOT EMPTY//////////////////////////////////
+	if (fin.eof()) 	//empty
+	{
+		cout << "File " << NAME << " is empty\n";
+		fin.close();
+		system("pause");
+		return 0;
+	} // end if
+	int countr = 0;
+	int countc = 0;
+	while (!fin.eof())
+	{
+		char buf = fin.get();
+		if (int(buf) == SPACE) {
+			countc++;
+		}
+		if (int(buf) == ENDL)
+		{
+			countr++;
+			if (countc >= params[1])
+			{
+
+				params[1] = countc;
+			}
+			countc = 0;
+		}
+	}
+	params[0] = countr + 1;
+	params[1]++;
+	fin.close();
+	return params;
+}
+int multyply_elements_in_row(int** matrix, int* params, int currentr) {
+	int result = 1;
+	for (int i = 0; i < params[1]; i++)
+	{
+		if (matrix[currentr][i] != 0) {
+			result *= matrix[currentr][i];
+		}
+		else
+		{
+			return 0;
+		}
+	}
+	return result;
+}
+void print_matrix(int** matrix, int* params) {
+	cout << "\nЗаданная матрица: \n";
+	for (int i = 0; i < params[0]; i++)
+	{
+		for (int j = 0; j < params[1]; j++)
+		{
+			cout << matrix[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+int get_option() {
+	int option;
+	cin >> option;
+	return option;
+}

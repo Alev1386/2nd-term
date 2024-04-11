@@ -1,0 +1,8 @@
+21:39:45 **** Incremental Build of configuration Debug for project FirstLabSecSem ****
+Info: Internal Builder is used for build
+g++ -o FirstLabSecSem.exe main.o 
+C:/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/lib/../lib/libmingw32.a(lib32_libmingw32_a-crt0_c.o):crt0_c.c:(.text.startup+0x39): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+
+21:39:45 Build Failed. 1 errors, 0 warnings. (took 651ms)
+

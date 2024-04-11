@@ -1,0 +1,250 @@
+#include <iostream>     //ñòàíäàðòíûå ïîòîêè ââîäà/âûâîäà
+#include <fstream>		//ôàéëîâûå ïîòîêè ââîäà/âûâîäà
+using namespace std;
+/////////////////////////////////define/////////////////////////
+#define SPACE 32//Êîä ïðîáåëà
+#define ENDL 10//Êîä ïåðåõîäà íà íîâóþ ñòðîêó
+
+const char* FNAME = "Test1.txt";//òåñòîâûé ôàéë
+
+
+////////////////////////////////////////////vars/////////////////////////////////
+
+
+int str1[255];//Ñ÷¸ò÷èê êîëè÷åñòâà ñèìâîëîâ ïî êàæäîìó ñèìâîëó òàáëèöû ASCII
+int str2[255];//Ñ÷¸ò÷èê êîëè÷åñòâà ñèìâîëîâ ïî êàæäîìó ñèìâîëó òàáëèöû ASCII
+
+int wordInFirstStr = 0;//Ïîâòîðû çàäàííîãî ñëîâà â ïåðâîé ñòðîêå
+int wordInSecondStr = 0;//Ïîâòîðû çàäàííîãî ñëîâà âî âòîðîé ñòðîêå
+int lenCounter = 0;//Ïåðåìåííàÿ äëÿ ïðîõîäà ïî ñëîâó èç ïåðâîé ñòðîêè
+
+
+//////////////////////////////Prorots//////////////////////////////////////
+void resize_arr(char *&file, int &sz);
+int get_option();
+int read_file(const char* NAME, char *&file,int &sze, int *&nl);
+int read_console(char *&file,int &sze, int *&nl);
+
+
+
+
+
+//////////////////////////////MAIN/////////////////////////////////////////////
+int main() {
+	int sizem = 0;//êîëè÷åñòâî ñèìâîëîâ â ôàéëå
+	char* arr = new char[sizem];//Ìàññèâ õðàíÿùèé âñå äàííûå èç ôàéëà
+	int* newline = new int[2];
+	newline[0] = 0;//Ïîðÿäêîâûå íîìåðà ñèìâîëîâ ïåðåõîäà íà íîâóþ ñòðîêó
+	newline[1] = 0;//Ïîðÿäêîâûå íîìåðà ñèìâîëîâ ïåðåõîäà íà íîâóþ ñòðîêó
+	if (1 == 1)
+	{
+		switch (read_file(FNAME, arr,sizem,newline))
+		{
+		case -1:
+			cout << "File " << FNAME << " is not found\n";
+			return -1;
+		case -2:
+			cout << "File " << FNAME << " is empty\n";
+			return -1;
+		case -3:
+			cout << "Too many strings! Only 3 must be included!" << endl;
+			return -1;
+		case -4:
+			cout << "Only 1 word must be included in 1st string!" << endl;
+			return -1;
+		default:
+			cout << "Reading ended!" << endl;
+			break;
+		}
+	}
+	else {
+		switch(read_console(arr,sizem,newline)){
+		default:
+			break;
+		}
+	}
+
+	//------------------------------------------------------------------------------------------------------------------------------------------------------//
+	//                                                  1 Ïå÷àòü ñâåäåíèé î ñîâïàäàþùèõ â çàäàííûõ ñòðîêàõ ñèìâîëàõ                                         //
+	//------------------------------------------------------------------------------------------------------------------------------------------------------//
+	for (int i = newline[0] + 1; i < newline[1]; i++)//Ñ÷èòàåì ñèìâîëû â ïåðâîé ñòðîêå
+	{
+		str1[int(arr[i])]++;
+	}
+	for (int i = newline[1] + 1; i < sizem; i++)//Ñ÷èòàåì ñèìâîëû âî âòîðîé ñòðîêå
+	{
+		str2[int(arr[i])]++;
+	}
+	cout << endl << endl << "The answer for the first issue:" << endl;
+	for (int i = 0; i < 255; i++)//Âûâîäèì ïîâòîðû ñèâîëîâ
+	{
+		if (str1[i] != 0 and str2[i] != 0) {
+			int k;
+			if (str1[i] < str2[i]) {
+				k = str1[i];
+			}
+			else {
+				k = str2[i];
+			}
+			cout << "Symbol <" << char(i) << "> repeats " << k << " times." << endl;
+		}
+	}
+	//------------------------------------------------------------------------------------------------------------------------------------------------------//
+	//                                                  2 Âûÿâëåíèå ñòðîêè, â êîòîðîé çàäàííîå ñëîâî âñòðå÷àåòñÿ ÷àùå                                       //
+	//------------------------------------------------------------------------------------------------------------------------------------------------------//
+	int wordlen = newline[0];//Äëèíà ñëîâà èç ïåðâîé ñòðîêè
+	char* word = new char[wordlen];//Ñëîâî èç ïåðâîé ñòðîêè
+	if (wordlen == 0)
+	{
+		cout << endl << "No word entered in first string" << endl;
+		return 0;
+	}
+	for (int i = 0; i < wordlen; i++)//Çàïèñü ïåðâîé ñòðîêè â áîëåå óäîáíûé äëÿ ðàáîòû âèä
+	{
+		word[i] = arr[i];
+	}
+
+	for (int i = newline[0] + 1; i < newline[1]; i++)//Èùåì ñëîâî â ïåðâîé ñòðîêå
+	{
+		if (arr[i] == word[lenCounter]) {//Ïðîâåðÿåì ïî îäíîé áóêâå íà ñîâïàäåíèå ñî ñëîâîì
+			lenCounter++;
+		}
+		else//Áóêâà íå ñîâïàëà. Îáíóëÿåì ñ÷¸ò÷èê
+		{
+			lenCounter = 0;
+		}
+		if (lenCounter == wordlen) {//Ñîâïàëè âñå áóêâû èç ñëîâà. Îòìå÷àåì, ÷òî íàøëè ñëîâî â ñòðîêå è îáíóëÿåì ñ÷¸ò÷èê
+			wordInFirstStr++;
+			lenCounter = 0;
+		}
+	}
+	for (int i = newline[1] + 1; i < sizem; i++)//Èùåì ñëîâî âî âòîðîé ñòðîêå
+	{
+		if (arr[i] == word[lenCounter]) {//Ïðîâåðÿåì ïî îäíîé áóêâå íà ñîâïàäåíèå ñî ñëîâîì
+			lenCounter++;
+		}
+		else//Áóêâà íå ñîâïàëà. Îáíóëÿåì ñ÷¸ò÷èê
+		{
+			lenCounter = 0;
+		}
+		if (lenCounter == wordlen) {//Ñîâïàëè âñå áóêâû èç ñëîâà. Îòìå÷àåì, ÷òî íàøëè ñëîâî â ñòðîêå è îáíóëÿåì ñ÷¸ò÷èê
+			wordInSecondStr++;
+			lenCounter = 0;
+		}
+	}
+	cout << endl << endl << "The answer for the second issue:" << endl;
+	cout << "The word is: ";
+	for (int i = 0; i < wordlen; i++)
+	{
+		cout << word[i];
+	}
+	cout << endl << "It meets " << wordInFirstStr << " times at first string!" << endl;
+	cout << "It meets " << wordInSecondStr << " times at second string!" << endl;
+
+	if (wordInFirstStr>wordInSecondStr)
+	{
+		cout << "Word meets more frequent at first string!" << endl;
+	}else if (wordInSecondStr > wordInFirstStr)
+	{
+		cout << "Word meets more frequent at second string!" << endl;
+	}
+	else
+	{
+		cout << "Word meets more same times at both strings!" << endl;
+	}
+
+}//main
+
+
+////////////////////////////////////////////Funcs////////////////////////////
+void resize_arr(char *&file, int &sz) {
+	int newSize = sz + 1;
+	char* newArr = new char[newSize];
+	for(int i = 0; i < sz;++i){
+		newArr[i] = file[i];
+	}
+	sz = newSize;
+	delete[] file;
+	file = newArr;
+}
+int get_option() {
+	int option;
+	cin >> option;
+	return option;
+}
+int read_file(const char* NAME, char *&file,int &sze, int *&nl) {
+	//////////////////////////FILE///////////////////////////////////////
+	ifstream fin(NAME);//Îïðåäåëÿåì ôàéë
+
+	/////////EXISTANCE////////////////////////////////////////
+	if (!fin)
+	{
+		fin.close();
+		return -1;
+	} // end if
+	///////////NOT EMPTY//////////////////////////////////
+	if (fin.eof()) 	//empty
+	{
+		fin.close();
+		return -2;
+	} // end if
+
+	/////////////////////////READ/////////////////////////
+	if (fin.good())
+	{
+		while (1) {
+			char buff = fin.get();
+			if(buff == -1){
+				break;
+			}
+			resize_arr(file,sze);
+			file[sze - 1] = buff;//Äîïèñûâàåì â òîëüêî ÷òî ñîçäàííóþ ÿ÷åéêó ìàññèâà íîâûé ñèìâîë èç ôàéëà
+			cout<<"Element with number "<<sze-1<<" is <"<<int(buff)<<">!\n";
+			if (int(file[sze - 1]) == ENDL)
+			{
+				if (nl[0] == 0) {//Ïåðâàÿ ìåòêà ïåðåõîäà íà íîâóþ ñòðîêó
+					file[0] = sze - 1;
+				}
+				else if (nl[1] == 0)//Âòîðàÿ ìåòêà ïåðåõîäà íà íîâóþ ñòðîêó
+				{
+					nl[1] = sze - 1;
+				}
+				else {//Ïîÿâèëñÿ 3é ïåðåõîä íà íîâóþ ñòðîêó
+					return -3;
+				}
+			}
+			if (int(file[sze - 1]) == SPACE and nl[0] == 0) {//Ïðîâåðêà íà 1 ñëîâî â ïåðâîé ñòðîêå
+				return -4;
+			}
+		}
+		fin.close();
+		cout<<endl;
+	}
+	return 0;
+}
+int read_console(char *&file,int &sze, int *&nl) {
+	cin.get();
+	for (int i = 0; i < 3; i++)
+	{
+		int flag = 0;
+		cout << "Enter " << i + 1 << " string." << endl;
+		while (file[sze - 1] != '\n' or flag == 0) {
+			flag = 1;
+			resize_arr(file,sze);
+			file[sze - 1] = cin.get();//Äîïèñûâàåì â òîëüêî ÷òî ñîçäàííóþ ÿ÷åéêó ìàññèâà íîâûé ñèìâîë èç ôàéëà
+
+			if (int(file[sze - 1]) == SPACE and nl[0] == 0) {//Ïðîâåðêà íà 1 ñëîâî â ïåðâîé ñòðîêå
+				cout << "Only 1 word must be included in 1st string!" << endl;
+				return -1;
+			}
+		}
+		if (i == 0) {//Ïåðâàÿ ìåòêà ïåðåõîäà íà íîâóþ ñòðîêó
+			nl[0] = sze - 1;
+		}
+		else if (i == 1)//Âòîðàÿ ìåòêà ïåðåõîäà íà íîâóþ ñòðîêó
+		{
+			nl[1] = sze - 1;
+		}
+	}
+	return 0;
+}
