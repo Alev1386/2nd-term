@@ -2476,3 +2476,478 @@ Info: Internal Builder is used for build
 g++ "-IE:\\Workspace\\SecLabSecTermWithDyn\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
 g++ -o SecLabSecTermWithDyn.exe "src\\main.o" 
 Info: Nothing to build for SecLabSecTermWithDyn
+04:31:10 **** Rebuild of configuration Debug for project SecLabSecTermWithDyn ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\SecLabSecTermWithDyn\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o SecLabSecTermWithDyn.exe "src\\main.o" 
+Info: Nothing to build for SecLabSecTermWithDyn
+05:21:33 **** Incremental Build of configuration Debug for project FirstLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\FirstLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o FirstLabSecTerm.exe "Src\\main.o" 
+05:21:36 **** Rebuild of configuration Debug for project SecLabSecTermNoDyn ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.cpp" 
+g++ -o SecLabSecTermNoDyn.exe "src\\main.o" 
+Info: Nothing to build for SecLabSecTermWithDyn
+05:21:38 **** Rebuild of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+C:/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/lib/../lib/libmingw32.a(lib32_libmingw32_a-crt0_c.o):crt0_c.c:(.text.startup+0x39): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for SecLabSecTermWithDyn
+Info: Nothing to build for FirstLabSecTerm
+Info: Nothing to build for SecLabSecTermNoDyn
+Info: Nothing to build for SecLabSecTermWithDyn
+05:22:26 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+C:/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/lib/../lib/libmingw32.a(lib32_libmingw32_a-crt0_c.o):crt0_c.c:(.text.startup+0x39): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for SecLabSecTermWithDyn
+Info: Nothing to build for FirstLabSecTerm
+Info: Nothing to build for SecLabSecTermNoDyn
+Info: Nothing to build for SecLabSecTermWithDyn
+Info: Nothing to build for ThirdLabSecTerm
+Info: Nothing to build for FirstLabSecTerm
+Info: Nothing to build for SecLabSecTermNoDyn
+Info: Nothing to build for SecLabSecTermWithDyn
+05:25:57 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+C:/mingw730_32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/lib/../lib/libmingw32.a(lib32_libmingw32_a-crt0_c.o):crt0_c.c:(.text.startup+0x39): undefined reference to `WinMain@16'
+collect2.exe: error: ld returned 1 exit status
+Info: Nothing to build for SecLabSecTermWithDyn
+Info: Nothing to build for FirstLabSecTerm
+Info: Nothing to build for SecLabSecTermNoDyn
+Info: Nothing to build for SecLabSecTermWithDyn
+05:27:24 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:25:09 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:46:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:140:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+Info: Nothing to build for ThirdLabSecTerm
+Info: Nothing to build for ThirdLabSecTerm
+06:26:31 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:46:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:140:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+Info: Nothing to build for ThirdLabSecTerm
+06:28:28 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:141:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:31:16 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:142:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:31:58 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:142:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:32:22 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:142:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:33:41 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:143:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:34:08 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:143:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:34:37 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:143:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:39:46 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:46:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:142:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:41:54 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:46:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:139:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:42:27 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:46:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:139:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:43:45 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:46:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:138:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+Info: Nothing to build for ThirdLabSecTerm
+06:45:45 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:46:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:139:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:46:13 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:32:2: error: expected ';' before 'int'
+  int n = 0;
+  ^~~
+..\Src\main.cpp:33:26: error: 'n' was not declared in this scope
+  switch(check_file(FNAME,n)){
+                          ^
+..\Src\main.cpp:33:26: note: suggested alternative: 'yn'
+  switch(check_file(FNAME,n)){
+                          ^
+                          yn
+..\Src\main.cpp:46:25: error: 'n' was not declared in this scope
+  plane* arr = new plane[n];
+                         ^
+..\Src\main.cpp:46:25: note: suggested alternative: 'yn'
+  plane* arr = new plane[n];
+                         ^
+                         yn
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:140:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+06:46:20 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:140:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:47:00 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:143:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:48:19 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:129:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:48:42 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:129:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:49:08 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:129:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:50:03 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:125:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:50:42 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:51:01 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:51:10 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:51:18 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:51:24 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:52:11 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:52:23 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+Info: Nothing to build for ThirdLabSecTerm
+06:52:47 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:127:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:53:04 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'int main()':
+..\Src\main.cpp:47:7: warning: unused variable 'B' [-Wunused-variable]
+  int* B = new int[n];
+       ^
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:128:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+Info: Nothing to build for ThirdLabSecTerm
+Info: Nothing to build for ThirdLabSecTerm
+06:56:27 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+..\Src\main.cpp: In function 'void indexSort(plane*, int, int*)':
+..\Src\main.cpp:133:33: warning: self-comparison always evaluates to false [-Wtautological-compare]
+              if (arr[in[i]].num < arr[in[i]].num) {
+                  ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+06:57:56 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+07:00:17 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+07:03:30 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+07:04:08 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+07:05:08 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+07:10:27 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+07:13:27 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
+07:14:01 **** Incremental Build of configuration Debug for project ThirdLabSecTerm ****
+Info: Internal Builder is used for build
+g++ "-IE:\\Workspace\\ThirdLabSecTerm\\Inc" -O0 -g3 -Wall -c -fmessage-length=0 -o "Src\\main.o" "..\\Src\\main.cpp" 
+g++ -o ThirdLabSecTerm.exe "Src\\main.o" 
